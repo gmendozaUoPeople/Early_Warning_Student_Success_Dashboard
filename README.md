@@ -2,9 +2,11 @@
 MSIT Capstone Project - Early Warning Student Success Dashboard
 
 ## Overview
+
 The Early Warning Student Success Dashboard is an MSIT Capstone project designed to help educators identify students who may be academically at risk through predictive analytics and centralized reporting.
 
 ## Repository Structure
+
 docs/
 Project documentation
 
@@ -18,6 +20,7 @@ tests/
 Testing artifacts
 
 ## Technologies
+
 React (planned)
 
 Python (planned)
