@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Dashboard Overview</h2>
+
+<p class="text-muted">
+This dashboard helps educators identify students who may require academic intervention.
+</p>
+
+<div class="row">
+
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>Total Students</h5>
+                <h2>250</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>High Risk</h5>
+                <h2 class="text-danger">25</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5>Low Risk</h5>
+                <h2 class="text-success">225</h2>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="mt-4">
+    <a href="/students" class="btn btn-primary">
+        View Student List
+    </a>
+</div>
+
+{% endblock %}

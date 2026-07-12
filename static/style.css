@@ -1,0 +1,41 @@
+body{
+
+    font-family: 'Poppins', sans-serif;
+    background:#f5f7fb;
+}
+
+.custom-navbar{
+    background-color:#d274efa1;
+    padding: 15px 30px;
+}
+
+.navbar-brand {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.card{
+    border:none;
+    border-radius:12px;
+}
+
+.table{
+    margin-bottom:0;
+}
+
+.table thead{
+    font-weight:600;
+}
+
+.badge{
+    font-size:.9rem;
+    padding:8px 12px;
+}
+
+h2{
+    font-weight:700;
+}
+
+.btn-primary{
+    border-radius:8px;
+}

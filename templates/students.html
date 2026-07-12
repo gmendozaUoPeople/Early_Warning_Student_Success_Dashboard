@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2>Student Directory</h2>
+        <p class="text-muted">Monitor student performance and identify students who may need intervention.</p>
+    </div>
+
+    <button class="btn btn-primary">
+        + Add Student
+    </button>
+</div>
+
+<div class="card shadow-sm">
+
+    <div class="card-header bg-light">
+
+        <input
+            class="form-control"
+            type="text"
+            placeholder="🔍 Search students...">
+
+    </div>
+
+    <div class="card-body">
+
+        <table class="table table-hover align-middle">
+
+            <thead class="table-primary">
+
+                <tr>
+
+                    <th>Student</th>
+
+                    <th>Grade</th>
+
+                    <th>Attendance</th>
+
+                    <th>Average</th>
+
+                    <th>Risk Level</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            {% for student in students %}
+
+            <tr>
+
+                <td>
+                    <strong>{{ student.first_name }} {{ student.last_name }}</strong>
+                </td>
+
+                <td>{{ student.grade_level }}</td>
+
+                <td>{{ student.attendance }}%</td>
+
+                <td>{{ student.average_grade }}%</td>
+
+                <td>
+
+                    {% if student.risk_level == "High" %}
+                        <span class="badge bg-danger">High Risk</span>
+
+                    {% elif student.risk_level == "Moderate" %}
+                        <span class="badge bg-warning text-dark">Moderate</span>
+
+                    {% else %}
+                        <span class="badge bg-success">Low Risk</span>
+
+                    {% endif %}
+
+                </td>
+
+            </tr>
+
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+{% endblock %}
