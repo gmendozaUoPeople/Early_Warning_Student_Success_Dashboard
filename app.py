@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-
+from risk import calculate_risk, get_recommendation
 from config import Config
 from models import db, Student
 
@@ -54,11 +54,20 @@ def students():
 
     student_list = Student.query.all()
 
+    for student in student_list:
+        student.risk_level = calculate_risk(
+            student.attendance,
+            student.average_grade
+        )
+
+        student.recommendation = get_recommendation(
+            student.risk_level
+        )
+
     return render_template(
         "students.html",
         students=student_list
     )
-
 
 if __name__ == "__main__":
     app.run(debug=True)
